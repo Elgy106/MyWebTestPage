@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/home.css" />
+		<script type="text/javascript" src="js/jquery3-min.js" ></script>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li><img class="current" src="img/img-首页/20160930,04,53,453 (1).jpg"/> </li>
+				<li><img src="img/img-首页/20170428,04,35,294.jpg" /> </li>
+				<li><img src="img/img-首页/20170428,04,35,444.jpg" /> </li>							
+			</ul>
+		</div>
+	
+		
+		
+		
+		
+		
+		
+		<script>
+			$(function(){
+				var num=0;
+				var timerId=0;
+				function lbxg(){
+					$('ul li').eq(num).stop().fadeIn(500).siblings().hide();
+				}				
+				function lb(){
+					timerId=setInterval(function(){
+						num++;
+						if(num==3){num=0;}
+						lbxg();
+					},2000);
+				}
+			    lb();
+			})		
+		</script>
+		
+	</body>
+</html>
